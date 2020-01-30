@@ -12,6 +12,10 @@ from scripts.print_predictions import parse_results
 
 app = Flask(__name__)
 
+@app.route('/test/{string}')
+def test(string):
+    return 'hello world'
+
 @app.route('/predict/<breed>/<image_file>')
 def route_request(breed, image_file):
     image_url = f"https://images.dog.ceo/breeds/{breed}/{image_file}"
