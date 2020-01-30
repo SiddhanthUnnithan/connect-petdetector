@@ -1,9 +1,3 @@
-import numpy as np
-from sklearn.preprocessing import MinMaxScaler
-
-def sigmoid(x):
-    return 1 / (1 + np.exp(-x))
-
 def parse_results(result):
     predictions = result[1].split(",")
     values = []
