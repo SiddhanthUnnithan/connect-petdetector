@@ -4,7 +4,7 @@ import shutil
 
 from urllib.request import urlopen
 import requests
-from flask import Flask
+from flask import Flask, jsonify
 
 from scripts.print_predictions import parse_results
 
@@ -20,7 +20,7 @@ def test(string):
 def route_request(breed, image_file):
     image_url = f"https://images.dog.ceo/breeds/{breed}/{image_file}"
 
-    return get_results(image_url)
+    return jsonify(get_results(image_url))
 
 
 def get_results(image_url):
