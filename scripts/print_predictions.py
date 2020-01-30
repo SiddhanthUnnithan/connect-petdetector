@@ -12,3 +12,5 @@ def parse_results(result):
         values.append(accuracy)
 
     print(output_dict)
+    
+    return output_dict
